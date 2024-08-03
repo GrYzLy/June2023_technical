@@ -14,19 +14,19 @@ namespace BookStore.Controllers
             _context = context;
         }
 
-        // GET: Books
+        
         public async Task<IActionResult> Index()
         {
             return View(await _context.Books.ToListAsync());
         }
 
-        // GET: Books/Create
+        
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Books/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Author,PublicationYear,Genre,Price")] Book book)
@@ -40,7 +40,7 @@ namespace BookStore.Controllers
             return View(book);
         }
 
-        // GET: Books/Delete/5
+        
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -58,7 +58,7 @@ namespace BookStore.Controllers
             return View(book);
         }
 
-        // POST: Books/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

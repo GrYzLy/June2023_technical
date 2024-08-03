@@ -3,16 +3,16 @@ using BookStore.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddControllersWithViews();
 
-// Configure Entity Framework Core to use SQLite
+
 builder.Services.AddDbContext<BookContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -31,3 +31,6 @@ app.MapControllerRoute(
     pattern: "{controller=Books}/{action=Index}/{id?}");
 
 app.Run();
+
+
+//Daniel Czyż

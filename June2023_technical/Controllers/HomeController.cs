@@ -18,6 +18,12 @@ public class HomeController : Controller
         return View();
     }
 
+    // GET: Home/Create
+    public IActionResult Create()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

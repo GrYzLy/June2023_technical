@@ -7,7 +7,7 @@
 <h1>Books</h1>
 
 <p>
-    <a class="btn btn-primary" asp-controller="Home" asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-controller="Books" asp-action="Create">Create New</a>
 </p>
 <table class="table table-striped">
     <thead>
@@ -32,7 +32,6 @@
                     <td>@item.Genre</td>
                     <td>@item.Price</td>
                     <td>
-                        <a class="btn btn-secondary" asp-controller="Books" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                         <a class="btn btn-danger" asp-controller="Books" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>

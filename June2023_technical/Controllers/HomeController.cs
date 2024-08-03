@@ -1,28 +1,25 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using June2023_technical.Models;
+using Microsoft.EntityFrameworkCore;
+using June2023_technical.Data;
 
 namespace June2023_technical.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly BookContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(BookContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        return View(await _context.Books.ToListAsync());
     }
 
-    // GET: Home/Create
-    public IActionResult Create()
-    {
-        return View();
-    }
 
     public IActionResult Privacy()
     {

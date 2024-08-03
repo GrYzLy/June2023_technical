@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.4
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "June2023_technical", "June2023_technical\June2023_technical.csproj", "{D520CA00-CA73-43D8-BCDC-B3B8BC09259C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "June2023_technical", "June2023_technical\June2023_technical.csproj", "{D520CA00-CA73-43D8-BCDC-B3B8BC09259C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
